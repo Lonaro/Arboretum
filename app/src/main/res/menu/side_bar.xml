@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_menu"
+            android:title="Menu" />
+
+        <item
+            android:id="@+id/nav_route"
+            android:title="Trasy" />
+
+
+
+        <!-- Add icons to navs -->
+        <!--android:icon="@drawable/ic_menu_camera"-->
+
+    </group>
+</menu>
