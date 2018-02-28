@@ -1,5 +1,6 @@
 package wojslawice.arboretum;
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,7 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawerLayout;
 
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+    Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionbar = getSupportActionBar();
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 MainFragment mainFragment = new MainFragment();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_frame,mainFragment)
+                        .replace(R.id.content_fragment,mainFragment)
                         .addToBackStack(null)
                         .commit();
 
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_route:
                 MainFragment routeFragment = new MainFragment();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_frame, routeFragment)
+                        .replace(R.id.content_fragment, routeFragment)
                         .addToBackStack(null)
                         .commit();
                 break;
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             default:
                 MainFragment defaultFragment = new MainFragment();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_frame,defaultFragment)
+                        .replace(R.id.content_fragment,defaultFragment)
                         .addToBackStack(null)
                         .commit();
         }
@@ -120,5 +122,22 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_menu) {
+            // Handle the camera action
+        } else if (id == R.id.nav_route) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

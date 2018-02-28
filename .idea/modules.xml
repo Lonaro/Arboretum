@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Arboretum.iml" filepath="$PROJECT_DIR$/.idea/Arboretum.iml" />
-      <module fileurl="file://D:\Arboretum\Arboretum.iml" filepath="D:\Arboretum\Arboretum.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\Arboretum\app\app.iml" filepath="D:\Arboretum\app\app.iml" />
     </modules>
   </component>
 </project>
